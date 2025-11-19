@@ -1,0 +1,7 @@
+input:
+  json:
+    folderName: "./sample_model/small"
+
+output:
+  sql:
+    folderName: "./sample_output/small"
