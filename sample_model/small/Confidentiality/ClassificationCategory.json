@@ -1,0 +1,62 @@
+{
+  "classType": "NormalClass",
+  "superType": null,
+  "name": "Fcb.Concept.Confidentiality.ClassificationCategory",
+  "displayNames": ["ClassificationCategory"],
+  "descriptions": ["A more granular indication of the sensitivity, over and above the classification."],
+  "ext": {
+    "NamespacePrefix": "mil.army.fcb.model.concept",
+    "NamespaceURI": "confidentiality"
+  },
+  "fields": [
+    {
+      "type": "VariableList",
+      "typeInner": "ZClassReference",
+      "typeName": "Fcb.Concept.Generic.CountryCodeTypeEnumeration",
+      "name": "countryCode",
+      "required": true,
+      "displayNames": ["countryCode"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": ["COMPOSITION_FIELD", "LIST_NO_DUPLICATES_ALLOWED", "ORDERED_LIST_FIELD"],
+      "enumValues": [],
+      "validation": {
+        "minItems": "1",
+        "comment": "Array must contain between 1 and unbounded item(s)"
+      }
+    },
+    {
+      "type": "ZClassReference",
+      "typeInner": null,
+      "typeName": "Fcb.Concept.Confidentiality.ClassificationCategoryTypeCodeTypeEnumeration",
+      "name": "typeCode",
+      "required": true,
+      "displayNames": ["typeCode"],
+      "descriptions": ["The type of restriction or expansion of the dissemination of information within the scope of the classification."],
+      "ext": {
+      },
+      "flags": [],
+      "enumValues": [],
+      "validation": {
+        "default": " "
+      }
+    },
+    {
+      "type": "ZClassReference",
+      "typeInner": null,
+      "typeName": "Fcb.Concept.Confidentiality.ClassificationCategoryTagCodeTypeEnumeration",
+      "name": "tagCode",
+      "required": true,
+      "displayNames": ["tagCode"],
+      "descriptions": ["A category tag that restricts and/or expands the dissemination of information within the scope of the classification.\\nRemarks:\\nThe values are defined by the security policy authority in force. \\nThe values specified in the MIM are the ones used within NATO. However, nations may share information in a NATO-led operation with a specific national classification. Accordingly, the code is extensible rather than complete."],
+      "ext": {
+      },
+      "flags": [],
+      "enumValues": [],
+      "validation": {
+        "default": " "
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "classType": "NormalClass",
+  "superType": null,
+  "name": "Fcb.Concept.ConceptMetadata",
+  "displayNames": ["ConceptMetadata"],
+  "descriptions": [" "],
+  "ext": {
+    "NamespacePrefix": "mil.army.fcb.model",
+    "NamespaceURI": "concept"
+  },
+  "fields": [
+    {
+      "type": "Text",
+      "typeInner": null,
+      "typeName": null,
+      "name": "uuid",
+      "required": true,
+      "displayNames": ["uuid"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": [],
+      "validation": {
+        "minLength": "1",
+        "maxLength": "255",
+        "pattern": "^[\\s\\S]*$",
+        "comment": "Text between 1–255 characters"
+      }
+    },
+    {
+      "type": "ZClassReference",
+      "typeInner": null,
+      "typeName": "Fcb.Concept.Confidentiality.Confidentiality",
+      "name": "confidentiality",
+      "required": true,
+      "displayNames": ["confidentiality"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": []
+    },
+    {
+      "type": "ZClassReference",
+      "typeInner": null,
+      "typeName": "Fcb.Concept.Provenance.Provenance",
+      "name": "provenance",
+      "required": true,
+      "displayNames": ["provenance"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": []
+    }
+  ]
+}

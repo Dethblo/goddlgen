@@ -1,0 +1,47 @@
+{
+  "classType": "AbstractClass",
+  "superType": null,
+  "name": "Fcb.Concept.Provenance.FcbUser",
+  "displayNames": ["FcbUser"],
+  "descriptions": [" "],
+  "ext": {
+    "NamespacePrefix": "mil.army.fcb.model.concept",
+    "NamespaceURI": "provenance"
+  },
+  "fields": [
+    {
+      "type": "Text",
+      "typeInner": null,
+      "typeName": null,
+      "name": "userDesignation",
+      "required": false,
+      "displayNames": ["userDesignation"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": [],
+      "validation": {
+        "minLength": "1",
+        "maxLength": "255",
+        "pattern": "^[\\s\\S]*$",
+        "comment": "Text between 1–255 characters"
+      }
+    },
+    {
+      "type": "DateTime",
+      "typeInner": null,
+      "typeName": null,
+      "name": "timeStamp",
+      "required": false,
+      "displayNames": ["timeStamp"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": [],
+      "validation": {
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$",
+        "comment": "Datetime format YYYY-MM-DDTHH:MM:SS"
+      }
+    }
+  ]
+}

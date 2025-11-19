@@ -1,0 +1,27 @@
+{
+  "classType": "Enumeration",
+  "superType": null,
+  "name": "Fcb.Concept.Provenance.UserTypeEnumeration",
+  "displayNames": ["UserTypeEnumeration"],
+  "descriptions": [" "],
+  "ext": {
+    "NamespacePrefix": "mil.army.fcb.model.concept",
+    "NamespaceURI": "provenance"
+  },
+  "enumValues": [
+    {
+      "displayNames": ["Creator"],
+      "descriptions": [" "],
+      "value": "CREATOR",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Editor"],
+      "descriptions": [" "],
+      "value": "EDITOR",
+      "ext": {
+      }
+    }
+  ]
+}

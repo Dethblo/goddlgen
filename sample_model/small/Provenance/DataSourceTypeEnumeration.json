@@ -1,0 +1,55 @@
+{
+  "classType": "Enumeration",
+  "superType": null,
+  "name": "Fcb.Concept.Provenance.DataSourceTypeEnumeration",
+  "displayNames": ["DataSourceTypeEnumeration"],
+  "descriptions": [" "],
+  "ext": {
+    "NamespacePrefix": "mil.army.fcb.model.concept",
+    "NamespaceURI": "provenance"
+  },
+  "enumValues": [
+    {
+      "displayNames": ["AFATDS AXS Default"],
+      "descriptions": [" "],
+      "value": "AXS_DEFAULT",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["AFATDS AXS"],
+      "descriptions": [" "],
+      "value": "AXS",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["AFATDS 6.8"],
+      "descriptions": [" "],
+      "value": "AFATDS_68",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["MIDB"],
+      "descriptions": [" "],
+      "value": "MIDB",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["DDS"],
+      "descriptions": [" "],
+      "value": "DDS",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Other"],
+      "descriptions": [" "],
+      "value": "OTHER",
+      "ext": {
+      }
+    }
+  ]
+}

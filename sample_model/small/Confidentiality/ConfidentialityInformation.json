@@ -1,0 +1,45 @@
+{
+  "classType": "NormalClass",
+  "superType": null,
+  "name": "Fcb.Concept.Confidentiality.ConfidentialityInformation",
+  "displayNames": ["ConfidentialityInformation"],
+  "descriptions": [" "],
+  "ext": {
+    "NamespacePrefix": "mil.army.fcb.model.concept",
+    "NamespaceURI": "confidentiality"
+  },
+  "fields": [
+    {
+      "type": "ZClassReference",
+      "typeInner": null,
+      "typeName": "Fcb.Concept.Confidentiality.ConfidentialityInformationClassificationCodeTypeEnumeration",
+      "name": "classificationCode",
+      "required": true,
+      "displayNames": ["classificationCode"],
+      "descriptions": ["<html>\\n  <head>\\n\\t\\t<style>\\n\\t\\t\\tp {padding:0px; margin:0px;}\\n\\t\\t</style>\\n\\t</head>\\n  <body>\\n    <pre>The sensitivity of an information resource.\\n<b>Remarks:</b>\\nThe values are defined by the security policy authority in force. \\nThe values specified in the MIM are the ones used within NATO. However, nations may share information in a NATO-led operation with a specific national classification. Accordingly, the code is extensible rather than complete.</pre>\\n</body>\\n</html>"],
+      "ext": {
+      },
+      "flags": [],
+      "enumValues": [],
+      "validation": {
+        "default": " "
+      }
+    },
+    {
+      "type": "VariableList",
+      "typeInner": "ZClassReference",
+      "typeName": "Fcb.Concept.Confidentiality.ClassificationCategory",
+      "name": "classificationCategory",
+      "required": false,
+      "displayNames": ["classificationCategory"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": ["COMPOSITION_FIELD", "LIST_NO_DUPLICATES_ALLOWED", "ORDERED_LIST_FIELD"],
+      "validation": {
+        "minItems": "0",
+        "comment": "Array must contain between 0 and unbounded item(s)"
+      }
+    }
+  ]
+}

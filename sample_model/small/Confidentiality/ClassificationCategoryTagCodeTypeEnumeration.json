@@ -1,0 +1,55 @@
+{
+  "classType": "Enumeration",
+  "superType": null,
+  "name": "Fcb.Concept.Confidentiality.ClassificationCategoryTagCodeTypeEnumeration",
+  "displayNames": ["ClassificationCategoryTagCodeTypeEnumeration"],
+  "descriptions": ["A category tag that restricts and/or expands the dissemination of information within the scope of the classification.\\nRemarks:\\nThe values are defined by the security policy authority in force. \\nThe values specified in the MIM are the ones used within NATO. However, nations may share information in a NATO-led operation with a specific national classification. Accordingly, the code is extensible rather than complete."],
+  "ext": {
+    "NamespacePrefix": "mil.army.fcb.model.concept",
+    "NamespaceURI": "confidentiality"
+  },
+  "enumValues": [
+    {
+      "displayNames": ["Additional sensitivity"],
+      "descriptions": ["Used to indicate the sensitive nature of certain information not conveyed by the Ownership or Classification; meaning that it is subject to additional stringent security regulations and procedures."],
+      "value": "ADDSTY",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Administrative"],
+      "descriptions": ["Used to indicate discretionary handling according to local, non-automated procedures or provide guidance about the disposition of information."],
+      "value": "ADMIN",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Context"],
+      "descriptions": ["Used in combination with the Governing Security Policy context to indicate the \\\"Ownership\\\" of information."],
+      "value": "CONTXT",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Only"],
+      "descriptions": ["Used to restrict or limit the dissemination of information to specific entities and a sub-set of the entities within the context for which that information was created."],
+      "value": "ONLY",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Releasable to"],
+      "descriptions": ["Used to expand the dissemination of information to additional entities outside of the context for which that information was created."],
+      "value": "RELTO",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["No Foreign"],
+      "descriptions": [" "],
+      "value": "NOFORN",
+      "ext": {
+      }
+    }
+  ]
+}

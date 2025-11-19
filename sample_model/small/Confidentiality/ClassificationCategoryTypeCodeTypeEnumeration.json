@@ -1,0 +1,34 @@
+{
+  "classType": "Enumeration",
+  "superType": null,
+  "name": "Fcb.Concept.Confidentiality.ClassificationCategoryTypeCodeTypeEnumeration",
+  "displayNames": ["ClassificationCategoryTypeCodeTypeEnumeration"],
+  "descriptions": ["The type of restriction or expansion of the dissemination of information within the scope of the classification."],
+  "ext": {
+    "NamespacePrefix": "mil.army.fcb.model.concept",
+    "NamespaceURI": "confidentiality"
+  },
+  "enumValues": [
+    {
+      "displayNames": ["Informative"],
+      "descriptions": ["Used to improve information handling not for the purpose of access control."],
+      "value": "INFRMV",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Permissive"],
+      "descriptions": ["Used to provide explicit inclusion sets for the purpose of access control."],
+      "value": "PRMSSV",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Restrictive"],
+      "descriptions": ["Used to reduce the scope of dissemination for the purpose of access control."],
+      "value": "RSTRCV",
+      "ext": {
+      }
+    }
+  ]
+}

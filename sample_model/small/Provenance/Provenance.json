@@ -1,0 +1,73 @@
+{
+  "classType": "NormalClass",
+  "superType": null,
+  "name": "Fcb.Concept.Provenance.Provenance",
+  "displayNames": ["Provenance"],
+  "descriptions": [" "],
+  "ext": {
+    "NamespacePrefix": "mil.army.fcb.model.concept",
+    "NamespaceURI": "provenance"
+  },
+  "fields": [
+    {
+      "type": "ZClassReference",
+      "typeInner": null,
+      "typeName": "Fcb.Concept.Provenance.DataSourceTypeEnumeration",
+      "name": "source",
+      "required": true,
+      "displayNames": ["source"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": [],
+      "enumValues": [],
+      "validation": {
+        "default": " "
+      }
+    },
+    {
+      "type": "ZClassReference",
+      "typeInner": null,
+      "typeName": "Fcb.Concept.Provenance.FcbCreator",
+      "name": "fcbCreator",
+      "required": false,
+      "displayNames": ["fcbCreator"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": []
+    },
+    {
+      "type": "VariableList",
+      "typeInner": "ZClassReference",
+      "typeName": "Fcb.Concept.Provenance.FcbEditor",
+      "name": "fcbEditor",
+      "required": false,
+      "displayNames": ["fcbEditor"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": ["COMPOSITION_FIELD", "LIST_NO_DUPLICATES_ALLOWED", "ORDERED_LIST_FIELD"],
+      "validation": {
+        "minItems": "0",
+        "comment": "Array must contain between 0 and unbounded item(s)"
+      }
+    },
+    {
+      "type": "DateTime",
+      "typeInner": null,
+      "typeName": null,
+      "name": "updateTime",
+      "required": false,
+      "displayNames": ["updateTime"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": [],
+      "validation": {
+        "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}$",
+        "comment": "Datetime format YYYY-MM-DDTHH:MM:SS"
+      }
+    }
+  ]
+}

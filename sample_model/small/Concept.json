@@ -1,0 +1,25 @@
+{
+  "classType": "AbstractClass",
+  "superType": null,
+  "name": "Fcb.Concept.Concept",
+  "displayNames": ["Concept"],
+  "descriptions": [" "],
+  "ext": {
+    "NamespacePrefix": "mil.army.fcb.model",
+    "NamespaceURI": "concept"
+  },
+  "fields": [
+    {
+      "type": "ZClassReference",
+      "typeInner": null,
+      "typeName": "Fcb.Concept.ConceptMetadata",
+      "name": "conceptMetadata",
+      "required": true,
+      "displayNames": ["conceptMetadata"],
+      "descriptions": [" "],
+      "ext": {
+      },
+      "flags": []
+    }
+  ]
+}

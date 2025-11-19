@@ -1,0 +1,55 @@
+{
+  "classType": "Enumeration",
+  "superType": null,
+  "name": "Fcb.Concept.Confidentiality.ConfidentialityInformationClassificationCodeTypeEnumeration",
+  "displayNames": ["ConfidentialityInformationClassificationCodeTypeEnumeration"],
+  "descriptions": ["<html>\\n  <head>\\n\\t\\t<style>\\n\\t\\t\\tp {padding:0px; margin:0px;}\\n\\t\\t</style>\\n\\t</head>\\n  <body>\\n    <pre>The sensitivity of an information resource.\\n<b>Remarks:</b>\\nThe values are defined by the security policy authority in force. \\nThe values specified in the MIM are the ones used within NATO. However, nations may share information in a NATO-led operation with a specific national classification. Accordingly, the code is extensible rather than complete.</pre>\\n</body>\\n</html>"],
+  "ext": {
+    "NamespacePrefix": "mil.army.fcb.model.concept",
+    "NamespaceURI": "confidentiality"
+  },
+  "enumValues": [
+    {
+      "displayNames": ["Unclassified"],
+      "descriptions": ["<html>\\n  <head>\\n\\t\\t<style>\\n\\t\\t\\tp {padding:0px; margin:0px;}\\n\\t\\t</style>\\n\\t</head>\\n  <body>\\n    <pre>Unauthorised disclosure would not be detrimental to the interests or effectiveness of the organisation referenced in the policy.</pre>\\n</body>\\n</html>"],
+      "value": "UNCLASSIFIED",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Restricted"],
+      "descriptions": ["<html><pre>Unauthorised disclosure would be detrimental to the interests or effectiveness of the organisation referenced in the policy.</pre></html>"],
+      "value": "RESTRICTED",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Confidential"],
+      "descriptions": ["<html>\\n  <head>\\n\\t\\t<style>\\n\\t\\t\\tp {padding:0px; margin:0px;}\\n\\t\\t</style>\\n\\t</head>\\n  <body>\\n    <pre>Unauthorised disclosure would be damaging to the organisation referenced in the policy.</pre>\\n</body>\\n</html>"],
+      "value": "CONFIDENTIAL",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Secret"],
+      "descriptions": ["<html><pre>Unauthorised disclosure would result in grave damage to the organisation referenced in the policy.</pre></html>"],
+      "value": "SECRET",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["TopSecret"],
+      "descriptions": ["<html><pre>Unauthorised disclosure would result in exceptionally grave damage to the organisation referenced in the policy.</pre></html>"],
+      "value": "TOPSECRET",
+      "ext": {
+      }
+    },
+    {
+      "displayNames": ["Controlled Unclassified Information"],
+      "descriptions": [" "],
+      "value": "CONTROLLED_UNCLASSIFIED_INFORMATION",
+      "ext": {
+      }
+    }
+  ]
+}
