@@ -2,6 +2,8 @@ package cmd
 
 import (
 	"example.com/goddlgen/pkg/descriptor"
+	"example.com/goddlgen/pkg/logger"
+	"example.com/goddlgen/pkg/model"
 	"github.com/spf13/cobra"
 )
 
@@ -19,6 +21,13 @@ var generateCmd = &cobra.Command{
 		}
 
 		// TODO Add Implementation
+		jsonData, err := model.ReadAll(desc.Input.JsonInput.FolderName)
+		if err != nil {
+			return
+		}
+
+		log := logger.Get()
+		log.Info().Msgf("Successfully parsed %d JSON files", len(jsonData))
 
 	},
 }
