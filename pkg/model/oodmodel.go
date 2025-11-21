@@ -62,7 +62,12 @@ func OrganizeJson(classFiles []*ClassFile) *DataOrganization {
 	log.Info().Msgf("Active Map has %d classes", len(activeMap))
 
 	// attach the inheritance hierarchy
-	tree := BuildTree(classFiles)
+	activeClassFiles := make([]*ClassFile, 0)
+	for _, aMap := range activeMap {
+		activeClassFiles = append(activeClassFiles, aMap)
+	}
+
+	tree := BuildTree(activeClassFiles)
 
 	log.Info().Msgf("Tree has %d classes", len(tree))
 	log.Info().Msgf("Organizing complete!")
@@ -79,11 +84,13 @@ func BuildTree(classFiles []*ClassFile) map[string]*ClassDef {
 	nodeMap := make(map[string]*ClassDef)
 
 	for _, entry := range classFiles {
+		entryName := strings.Clone(entry.Name)
+		parentName := strings.Clone(entry.SuperType)
 		nodeMap[entry.Name] = &ClassDef{
-			ClassName:  &entry.Name,
+			ClassName:  &entryName,
 			ClassData:  entry,
 			Subclasses: make(map[string]*ClassDef),
-			ParentName: &entry.SuperType,
+			ParentName: &parentName,
 			Parent:     nil,
 			Fields:     make(map[string]*ClassDef),
 		}
