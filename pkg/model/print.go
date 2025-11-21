@@ -10,7 +10,7 @@ func PrintClassHierarchy(rootMap map[string]*ClassDef) {
 	tree := treeprint.New()
 
 	for _, class := range rootMap {
-		branch := tree.AddBranch(class.Name())
+		branch := tree.AddBranch(*class.ClassName)
 		addChildren(class.Subclasses, branch)
 	}
 
@@ -23,7 +23,7 @@ func addChildren(childMap map[string]*ClassDef, parent treeprint.Tree) {
 	}
 
 	for _, child := range childMap {
-		branch := parent.AddBranch(child.Name())
+		branch := parent.AddBranch(*child.ClassName)
 		addChildren(child.Subclasses, branch)
 	}
 }
