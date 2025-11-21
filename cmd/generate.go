@@ -13,6 +13,8 @@ var generateCmd = &cobra.Command{
 	Short: "Generates PostgreSQL DDL for data specified in the descriptor file.",
 
 	Run: func(cmd *cobra.Command, args []string) {
+		log := logger.Get()
+
 		// read the descriptor file
 		var desc = descriptor.Descriptor{}
 		err := desc.ReadFromYml(DescFile)
@@ -26,9 +28,10 @@ var generateCmd = &cobra.Command{
 			return
 		}
 
-		log := logger.Get()
 		log.Info().Msgf("Successfully parsed %d JSON files", len(jsonData))
 
+		mod := model.OrganizeJson(jsonData)
+		model.PrintClassHierarchy(mod.TopLevelClasses)
 	},
 }
 
