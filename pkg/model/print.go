@@ -2,6 +2,7 @@ package model
 
 import (
 	"fmt"
+	"sort"
 
 	"github.com/xlab/treeprint"
 )
@@ -9,9 +10,16 @@ import (
 func PrintClassHierarchy(rootMap map[string]*ClassDef) {
 	tree := treeprint.New()
 
-	for _, class := range rootMap {
-		branch := tree.AddBranch(*class.ClassName)
-		addChildren(class.Subclasses, branch)
+	// sort by keys
+	keys := make([]string, 0)
+	for key := range rootMap {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+
+	for _, className := range keys {
+		branch := tree.AddBranch(className)
+		addChildren(rootMap[className].Subclasses, branch)
 	}
 
 	fmt.Println(tree.String())
@@ -22,8 +30,15 @@ func addChildren(childMap map[string]*ClassDef, parent treeprint.Tree) {
 		return
 	}
 
-	for _, child := range childMap {
-		branch := parent.AddBranch(*child.ClassName)
-		addChildren(child.Subclasses, branch)
+	// sort by keys
+	keys := make([]string, 0)
+	for key := range childMap {
+		keys = append(keys, key)
+	}
+	sort.Strings(keys)
+
+	for _, childName := range keys {
+		branch := parent.AddBranch(childName)
+		addChildren(childMap[childName].Subclasses, branch)
 	}
 }
