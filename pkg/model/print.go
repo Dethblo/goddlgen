@@ -18,7 +18,7 @@ func PrintClassHierarchy(rootMap map[string]*ClassDef) {
 	sort.Strings(keys)
 
 	for _, className := range keys {
-		branch := tree.AddBranch(className)
+		branch := tree.AddBranch(getPrefix(rootMap[className]) + className)
 		addChildren(rootMap[className].Subclasses, branch)
 	}
 
@@ -38,7 +38,17 @@ func addChildren(childMap map[string]*ClassDef, parent treeprint.Tree) {
 	sort.Strings(keys)
 
 	for _, childName := range keys {
-		branch := parent.AddBranch(childName)
+		branch := parent.AddBranch(getPrefix(childMap[childName]) + childName)
 		addChildren(childMap[childName].Subclasses, branch)
 	}
+}
+
+func getPrefix(cf *ClassDef) string {
+	prefix := ""
+	if cf.ClassData.ClassType == "AbstractClass" {
+		prefix = "(A) "
+	} else if cf.ClassData.ClassType == "NormalClass" {
+		prefix = "(N) "
+	}
+	return prefix
 }
